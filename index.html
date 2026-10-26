@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Supports normal text and special characters -->
+    <meta charset="UTF-8">
+
+    <!-- Allows the layout to fit mobile screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Text displayed in the browser tab -->
+    <title>Home | Cultural Heritage Of Kurukshetra</title> 
+
+    <!-- Connects this page to our shared CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Loads our Javascript after the HTML is ready -->
+    <script src="index.js" defer></script> 
+</head>
+
+<body>
+
+    <!-- Website name and page heading -->
+    <header id="header">
+
+        <!-- Top row: logo and website name -->
+        <div class="brandBar">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Kurukshetra Heritage logo">
+                <span>Cultural Heritage of Kurukshetra</span>
+            </a>
+        </div>
+
+        <!-- Second row: current page and menu button -->
+        <div class="pageBar">
+            <button type="button"
+                    id="menuToggle"
+                    aria-controls="navLinks"
+                    aria-expanded="false">
+                ☰ 
+            </button>
+
+            <p>Home</p>
+
+            <!-- Search box on the right of the Home bar -->
+            <div class="searchArea">
+                <button type="button"
+                        id="searchToggle"
+                        aria-label="Open search"
+                        aria-expanded="false">
+                    🔍
+                </button>
+
+                <input type="search"
+                       id="menuSearch"
+                       placeholder="Search pages..."
+                       aria-label="Search website pages"
+                       aria-controls="menuPages"
+                       hidden>
+            </div>
+        </div>
+    
+            
+        <!-- Navigation follows the pages in my sitemap -->
+         <nav id="navLinks" aria-label="Main navigation">
+            <!-- Close the side menu -->
+            <button type="button" id="closeMenu" aria-label="Close menu">
+            &times;
+            </button>
+
+            <p id="searchMessage" role="status"></p>
+
+            <ul>
+                <li>
+                    <a href="index.html" aria-current="page">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Kurukshetra</a>
+                </li>
+
+                <li>
+                    <a href="heritage.html">Heritage</a>
+                </li>
+
+                <li>
+                    <a href="places.html">Important Places</a>
+                </li>
+
+                <li>
+                    <a href="education.html">Education &amp; Learning </a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="guidance.html">Guidance &amp; Support</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>     
+            </ul>
+            <!-- Account options shown in the wireframe -->
+            <div class="accountOptions">
+
+                <div class="accountBox">
+                    <button type="button" id="signupbutton">Sign Up</button>
+                    <p>Create a new account</p>
+                </div>
+
+                <div class="accountBox">
+                    <button type="button" id="loginbutton">Log In</button>
+                    <p>Already have an account?</p>
+                </div>
+
+            </div>
+
+         </nav>
+
+    </header> 
+      <!-- Google Translator Widget -->
+        <!-- The translator dropdown will appear here -->
+        <div id="google_translate_element"></div>
+
+        <!-- JavaScript function that starts Google Translate -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    {
+                        pageLanguage: "en"
+                    },
+                    "google_translate_element"
+                );
+            }
+        </script>
+
+        <!-- Google Translate script -->
+        <script
+            type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+    
+
+    <!-- Our banner, pictures, cards and fact box will go here -->
+    <main id="maincontent" class="homeLayout">
+
+        <!-- Main pictures, website introduction and Explore links -->
+        <section class="hero">
+            <div class="heroImages">
+                <img id="heroImage" class="heroSlide isVisible"
+                     src="images/hero1.png"
+                     alt="View of Kurukshetra">
+
+                <img id="nextHeroImage" class="heroSlide"
+                     src="images/hero2.png"
+                     alt="">
+            </div>
+         
+
+            <div class="heroText">
+                <h1>Cultural Heritage Of Kurukshetra</h1>
+
+                <p>
+                    Discover the history, culture and heritage of Kurukshetra.
+                </p>
+
+                <a href="about.html" class="button">Explore</a>
+            </div>
+        </section> 
+
+        <!-- Fact box shown below the main banner -->
+        <section class="factbox">
+            <h2> 💡 Did You Know?</h2>
+
+            <p>
+                Kurukshetra is in the Indian state of Haryana.
+            </p>
+        </section> 
+
+        <!-- These cards will appear on the left of the large screens -->
+        <aside class="featureCards" aria-label="Website highlights">
+
+            <!-- Heritage card -->
+            <article class="featureCard">
+                <img src="images/heritage.png"
+                     alt="A heritage site in Kurukshetra">
+
+                <div>
+                    <h2>Heritage</h2>
+                    <p>Explore historical, religious and
+                        cultural heritage.
+                    </p>
+                    <a href="heritage.html" class="cardArrow" aria-label="Open Heritage page">→</a>
+                </div>
+            </article>
+
+            <!-- Education and Learning card -->
+            <article class="featureCard">
+                <img src="images/education.jpeg"
+                     alt="An educational institution in Kurukshetra">
+
+                <div>
+                    <h2>Education &amp; Learning</h2>
+                    <p>Discover universities and 
+                        interactive learning.
+                    </p>
+                    <a href="education.html" class="cardArrow" aria-label="Open Education and Learning page">→</a>
+                </div>
+            </article>
+
+            <article class="featureCard">
+                <img src="images/importantPlaces.png"
+                     alt="A heritage site in Kurukshetra">
+                     
+                <div>
+                    <h2>Important Places</h2>
+                    <p>
+                        Temples, museums, sarovars, 
+                        and sacred sites.
+                    </p>
+                    <a href="places.html" class="cardArrow" aria-label="Open Important Places page">→</a>
+                </div>
+            </article>
+
+            <article class="featureCard">
+                <img src="images/gallery.png"
+                     alt="A Cultural scene in Kurukshetra">
+                     
+                <div>
+                    <h2>Gallery</h2>
+                    <p>
+                        Discover Kurukshetra through photographs.
+                    </p>
+                    <a href="gallery.html" class="cardArrow" aria-label="Open Gallery Page">→</a>
+                </div>
+            </article>
+        </aside> 
+
+    </main>
+    <section class="visitSection">
+        <div class="visitContent">
+            <h2>Plan Your Visit</h2>
+            <p>
+                Get helpful information for visiting Kurukshetra, including travel tips,
+                local guidance and support for visitors.
+            </p>
+
+            <a href="guidance.html" class="button">View Travel Tips</a>
+        </div>
+    </section>
+
+    <!-- Information displayed at the bottom of the page -->
+    <footer>
+
+        <div class="footerContent">
+
+            <div>
+                <h3>Cultural Heritage Of Kurukshetra</h3>
+                <p>Discover the history, culture and sacred places of Kurukshetra.</p>       
+            </div>
+            
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">•Home</a>
+                <a href="about.html">•About Kurukshetra</a>
+                <a href="heritage.html">•Heritage</a>
+            </div>
+
+            <div>
+                <h3>Explore</h3>
+                <a href="places.html">•Important Places</a>
+                <a href="education.html">•Education &amp; Learning</a>
+                <a href="gallery.html">•Gallery</a>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>📍Kurukshetra, Haryana, India</p>
+                <p>📧info@kurukshetra.org.in</p>
+                <p>📞+91 1234567890</p>
+            </div>
+        </div>
+
+        <p class="copyright">
+            This website is for educational purposes only.
+           &copy; 2026 Cultural Heritage of Kurukshetra. All rights reserved. 
+            Website Project by Nivedita.<span><button onclick="document.getElementById('dialogContainer').showModal();">Copyright & Privacy Policy</button></span>
+        </p>
+    </footer> 
+
+    <dialog id="dialogContainer">
+        <!-- Copyright and privacy policy -->
+        <h1>Copyright & Privacy Policy</h1>
+        
+        <section class="legalContent">
+
+            <h2>Copyright Notice</h2>
+
+            <p>
+                This website is an original work created solely for educational and
+                assessment purposes. It is not intended for commercial use, financial
+                gain, or business activities.
+            </p>
+
+            <p>
+                Unless otherwise stated, the website content, including text, design,
+                source code, and original materials, has been created by the author.
+                Images, audio, video, and other media resources used on this website
+                are included for educational, critique, review, research, or
+                demonstration purposes and are believed to comply with applicable
+                copyright laws, fair dealing/fair use provisions, or the terms of
+                their respective licences. Copyright for third-party materials remains
+                with their respective owners.
+            </p>
+
+            <p>
+                This website is licensed under the
+                <strong>Creative Commons Attribution-NonCommercial 4.0 International
+                (CC BY-NC 4.0) Licence</strong>, allowing others to share and adapt
+                the content for non-commercial purposes with appropriate attribution.
+            </p>
+
+            <p>
+                <a href="https://creativecommons.org/licenses/by-nc/4.0/"
+                target="_blank"
+                rel="noopener">
+                    Creative Commons BY-NC 4.0 Licence
+                </a>
+            </p>
+
+            <hr>
+
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated:</strong> 14/10/2026</p>
+
+            <h3>1. Information We Collect</h3>
+            <p>
+                We may collect personal information such as your name, email address,
+                and account details when you register or use our website.
+            </p>
+
+            <h3>2. How We Use Your Information</h3>
+            <p>We use your information to:</p>
+            <ul>
+                <li>Provide website services</li>
+                <li>Improve user experience</li>
+                <li>Respond to enquiries</li>
+                <li>Maintain website security</li>
+            </ul>
+
+            <h3>3. Sharing Information</h3>
+            <p>
+                We do not sell or rent personal information to third parties.
+                Information may only be shared when required by law or to provide our
+                services.
+            </p>
+
+            <h3>4. Data Security</h3>
+            <p>
+                We use appropriate security measures to protect your personal
+                information against unauthorized access, loss, or misuse.
+            </p>
+
+            <h3>5. Your Rights</h3>
+            <ul>
+                <li>Access your personal information</li>
+                <li>Request corrections to inaccurate information</li>
+                <li>Request deletion of information where legally permitted</li>
+            </ul>
+
+            <h3>6. Cookies</h3>
+            <p>
+                Our website may use cookies to improve functionality and analyse
+                website usage.
+            </p>
+
+            <h3>7. Contact Us</h3>
+            <p>
+                If you have questions about this Privacy Policy, please contact us at:
+                Email: info@kurukshetra.org.in<br>
+                Phone: +91 1234567890<br>
+                Address: Kurukshetra, Haryana, India 
+            </p>
+
+        </section>
+        <button onclick="document.getElementById('dialogContainer').close();">CLOSE</button>
+
+    </dialog>
+
+</body>
+</html>

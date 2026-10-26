@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Supports normal text and special characters -->
+    <meta charset="UTF-8">
+
+    <!-- Allows the layout to fit mobile screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Text displayed in the browser tab -->
+    <title>Education &amp; Learning | Cultural Heritage Of Kurukshetra</title> 
+
+    <!-- Connects this page to our shared CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Loads our Javascript after the HTML is ready -->
+    <script src="index.js" defer></script>
+    <script src="education.js" defer></script> 
+</head>
+
+<body>
+
+    <!-- Website name and page heading -->
+    <header id="header">
+
+        <!-- Top row: logo and website name -->
+        <div class="brandBar">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Kurukshetra Heritage logo">
+                <span>Cultural Heritage of Kurukshetra</span>
+            </a>
+        </div>
+
+        <!-- Second row: current page and menu button -->
+        <div class="pageBar">
+            <button type="button"
+                    id="menuToggle"
+                    aria-controls="navLinks"
+                    aria-expanded="false">
+                ☰ 
+            </button>
+
+            <p>Education &amp; Learning</p>
+
+            <!-- Search box on the right of the Home bar -->
+            <div class="searchArea">
+                <button type="button"
+                        id="searchToggle"
+                        aria-label="Open search"
+                        aria-controls="menuSearch"
+                        aria-expanded="false">
+                    🔍
+                </button>
+
+                <input type="search"
+                       id="menuSearch"
+                       placeholder="Search pages..."
+                       aria-label="Search website pages"
+                       aria-controls="menuPages"
+                       hidden>
+            </div>
+        </div>
+    
+            
+        <!-- Navigation follows the pages in my sitemap -->
+         <nav id="navLinks" aria-label="Main navigation">
+            <!-- Close the side menu -->
+            <button type="button" id="closeMenu" aria-label="Close menu">
+            &times;
+            </button>
+
+            <p id="searchMessage" role="status"></p>
+
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Kurukshetra</a>
+                </li>
+
+                <li>
+                    <a href="heritage.html">Heritage</a>
+                </li>
+
+                <li>
+                    <a href="places.html">Important Places</a>
+                </li>
+
+                <li>
+                    <a href="education.html" aria-current="page">Education &amp; Learning </a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="guidance.html">Guidance &amp; Support</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>       
+            </ul>
+            <!-- Account options shown in the wireframe -->
+            <div class="accountOptions">
+
+                <div class="accountBox">
+                    <button type="button" id="signupbutton">Sign Up</button>
+                    <p>Create a new account</p>
+                </div>
+
+                <div class="accountBox">
+                    <button type="button" id="loginbutton">Log In</button>
+                    <p>Already have an account?</p>
+                </div>
+
+            </div>
+
+            
+         </nav>
+
+    </header> 
+      <!-- Google Translator Widget -->
+        <!-- The translator dropdown will appear here -->
+        <div id="google_translate_element"></div>
+
+        <!-- JavaScript function that starts Google Translate -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    {
+                        pageLanguage: "en"
+                    },
+                    "google_translate_element"
+                );
+            }
+        </script>
+
+        <!-- Google Translate script -->
+        <script
+            type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+
+        <!-- Our content of the page will go here-->
+        <main class="educationPage">
+
+            <section class="educationHero">
+
+                <div class="educationHeroImages">
+                    <img id="educationHeroImage"
+                         class="heroSlide isVisible"
+                         src="images/kuk1.jpg"
+                         alt="Education and Learning in Kurukshetra">
+
+                    <img id="nextEducationHeroImage"
+                         class="heroSlide"
+                         src="images/training_and_placement_cell_nit_kurukshetra_cover.jpg"
+                         alt="">
+
+                </div>
+
+
+                <div class="educationHeroText">
+                    <p class="breadcrumb">Home &gt; Education &amp; Learning</p>
+
+                    <h1>Education and Learning</h1>
+                    <p>
+                        Discover universities, traditional knowledge and learning
+                        opportunities in Kurukshetra.
+                    </p>
+                </div>
+            </section>
+
+            <section class="educationIntro">
+                <h2>Learn in Kurukshetra</h2>
+
+                <p>
+                    Explore universities, traditional knowledge and learning experiences
+                    connected with Kurukshetra.
+                    
+                </p>
+            </section>
+
+            
+            <section class="educationCards">
+                <!-- Feature Card button 1 -->
+                <button type="button"
+                        class="educationCard"
+                        data-modal="institutionsModal">
+                    <img src="images/kuk1.jpg"
+                         alt="Kurukshetra University">
+
+
+                    <span>
+                        <strong>Universities and Colleges</strong>
+                        <small>Explore higher education institutions and learning opportunities in Kurukshetra.</small>
+                        <small>"Click Here To Know More"</small>
+                    </span>
+                </button>
+
+                <!-- Feature Card button 2 -->
+                <button type="button"
+                         class="educationCard"
+                         data-modal="didYouKnowModal">
+                    
+                    <img src="images/diduknow.jpg"
+                         alt="Did you know about Kurukshetra">
+
+                    <span>
+                        <strong>Did You Know?</strong>
+                        <small>Discover interesting facts about Kurukshetra's history, culture and heritage.</small>
+                        <small>"Click Here To Know More"</small>
+                    </span>
+                </button>
+
+                <!-- Feature Card button 3 -->
+                <button type="button"
+                         class="educationCard"
+                         data-modal="quizModal">
+                    
+                    <img src="images/quiz.webp"
+                         alt="Quiz and learning activities">
+
+                    <span>
+                        <strong>Quiz Zone</strong>
+                        <small>Test your knowledge about Kurukshetra through a short interactivequiz.</small>
+                        <small>"Click Here To Start The Quiz"</small>
+                    </span>
+                </button>
+
+                <!-- Feature Card button 4 -->
+                <button type="button"
+                         class="educationCard"
+                         data-modal="resourcesModal">
+                    
+                    <img src="images/learning.webp"
+                         alt="Books and learning resources">
+
+                    <span>
+                        <strong>Learning Resources</strong>
+                        <small>Find useful books, websites and study resources about Kurukshetra.</small>
+                        <small>"Click Here To Know More"</small>
+                    </span>
+                </button>
+                
+            </section>
+
+       
+        </main>
+        
+        <!-- Pop-up screen opened by the Universities feature card -->
+        <section class="educationModal"
+                 id="institutionsModal"
+                 aria-hidden="true"
+                 role="dialog"
+                 aria-modal="true"
+                 aria-labelledby="institutionsTitle">
+            
+            <!-- white content box inside the darker pop-up background -->
+            <div class="modalBox">
+
+                <!-- Button used to close this pop-up -->
+                <button type="button"
+                        class="modalClose"
+                        aria-label="Close pop-up">
+                    &times;
+                </button>
+
+                <!-- Pop-up heading -->
+                <h2 id="institutionsTitle">Universities and Colleges</h2>
+
+                <!-- First Institution -->
+                <article class="institutionInfo">
+                    <div>
+                        <h3>
+                            <a href="https://kuk.ac.in/" target="_blank">
+                                Kurukshetra University
+                            </a>
+                        </h3>
+
+                        <p>
+                            Kurukshetra University is a major higher-education institution
+                            offering a wide range of subjects and learning opportunities.
+                        </p>
+                    </div>
+
+                    <img src="images/kuk1.jpg"
+                         alt="Kurukshetra University campus">
+                </article>
+
+                <!-- second institution-->
+                 <article class="institutionInfo">
+                    <div>
+                        <h3>
+                            <a href="https://nitkkr.ac.in/" target="_blank">
+                                National Institute of Technology Kurukshetra
+                            </a>
+                        </h3>
+
+                        <p>
+                            NIT Kurukshetra is known for engineering, technology, research and technical education.
+                        </p>
+                    </div>
+
+                    <img src="images/training_and_placement_cell_nit_kurukshetra_cover.jpg"
+                         alt="NIT Kurukshetra campus">
+                </article>
+
+                <!-- Third institution -->
+                <article class="institutionInfo">
+                    <div>
+                        <h3>
+                            <a href="https://skau.ac.in/" target="_blank">
+                                Shri Krishna AYUSH University
+                            </a>
+                        </h3>
+
+                        <p>
+                            Shri Krishna AYUSH University focuses on AYUSH systems of 
+                            medicine and healthcare education.
+                        </p>
+                    </div>
+
+                    <img src="images/Shri Krishna Ayush University, Kurukshetra_Campus-View2.avif"
+                         alt="Shri Krishna AYUSH University campus">
+                </article>
+                                
+
+            </div>
+                
+        </section>
+
+        <!-- pop-up screen opened by the Did You Know feature card-->
+        <section class="educationModal"
+                 id="didYouKnowModal"
+                 aria-hidden="true"
+                 role="dialog"
+                 aria-modal="true"
+                 aria-labelledby="factsTitle">
+            
+            <!--content box inside the pop-up-->
+            <div class="modalBox">
+
+                <!--button used to close the pop-up-->
+                <button type="button"
+                        class="modalClose"
+                        aria-label="Close pop-up">
+                    &times;
+                </button>
+
+                <!--pop-up heading-->
+                <h2 id="factsTitle"> 💡 Did You Know?</h2>
+
+                <!--interesting facts-->
+                <ul class="factsList">
+                    <li>Kurukshetra is strongly connected with the Mahabharata and Bhagavad Gita traditions.</li>
+                    <li>Jyotisar is traditionally associated with Lord Krishna’s guidance to Arjuna.</li>
+                    <li>Kurukshetra has important temples, sacred sarovars, museums and learning centres.</li>
+                    <li>The International Gita Mahotsav celebrates the cultural and spiritual importance of the region.</li>
+                    <li>
+                        Kurukshetra has a long archaeological history, with some local pottery
+                        evidence linked to pre-Harappan and Harappan periods.
+                    </li>
+
+                    <li>
+                        Brahma Sarovar is one of Kurukshetra’s best-known sacred water bodies and
+                        is an important place during the International Gita Mahotsav.
+                    </li>
+
+                    <li>
+                        Kurukshetra University was founded in 1956 and is one of Haryana’s major
+                        higher-education institutions.
+                    </li>
+
+                    <li>
+                         National Institute of Technology Kurukshetra began in 1963 as a Regional
+                        Engineering College before becoming NIT Kurukshetra.
+                    </li>
+
+                    <li>
+                        Kalpana Chawla Memorial Planetarium near Jyotisar includes a dome theatre,
+                        astronomy gallery and Astro Park for science learning.
+                    </li>
+
+                    <li>
+                        Mahabharata Anubhav Kendra at Jyotisar uses interactive displays to help
+                        visitors explore stories connected with the Mahabharata.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- pop-up screen opened by the quiz zone feature card-->
+        <section class="educationModal"
+                  id="quizModal"
+                  aria-hidden="true"
+                  role="dialog"
+                  aria-modal="true"
+                  aria-labelledby="quizTitle">
+                
+                <!-- content box inside the pop-up-->
+                <div class="modalBox">
+                    
+                    <!--button for closing the pop-up-->
+                    <button type="button"
+                            class="modalClose"
+                            aria-label="Close pop-up">
+                        &times;
+                    </button>
+
+                    <!--Quiz heading-->
+                    <h2 id="quizTitle">Quiz Zone</h2>
+                    <p>Answer these questions to test your knowledge of Kurukshetra</p>
+                
+                    <!--quiz questions-->
+                    <form id="heritageQuiz">
+
+                        <fieldset>
+                            <legend>1. Which City is associated with the Bhagavad Gita?</legend>
+                            <label><input type="radio" name="question1" value="wrong">Delhi</label>
+                            <label><input type="radio" name="question1" value="correct">Kurukshetra</label>
+                            <label><input type="radio" name="question1" value="wrong">Jaipur</label>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>1. Which sacred water body is well known in Kurukshetra?</legend>
+                            <label><input type="radio" name="question2" value="wrong">Dal Lake</label>
+                            <label><input type="radio" name="question2" value="correct">Brahma Sarovar</label>
+                            <label><input type="radio" name="question2" value="wrong">Karan Lake</label>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>1. Which institution is known for technical education?</legend>
+                            <label><input type="radio" name="question3" value="correct">NIT Kurukshetra</label>
+                            <label><input type="radio" name="question3" value="wrong">Kurukshetra University</label>
+                            <label><input type="radio" name="question3" value="wrong">Shri Krishna AYUSH University</label>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>4. What is Kalpana Chawla Memorial Planetarium mainly about?</legend>
+                            <label><input type="radio" name="question4" value="wrong"> Sports training</label>
+                            <label><input type="radio" name="question4" value="correct"> Astronomy and space learning</label>
+                            <label><input type="radio" name="question4" value="wrong"> Cooking classes</label>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>5. Which place is traditionally connected with the Bhagavad Gita?</legend>
+                            <label><input type="radio" name="question5" value="correct"> Jyotisar</label>
+                            <label><input type="radio" name="question5" value="wrong"> Agra</label>
+                            <label><input type="radio" name="question5" value="wrong"> Shimla</label>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>6. Which museum displays stories connected with Lord Krishna?</legend>
+                            <label><input type="radio" name="question6" value="wrong"> Dharohar Haryana Cultural Museum</label>
+                            <label><input type="radio" name="question6" value="correct"> Krishna Museum</label>
+                            <label><input type="radio" name="question6" value="wrong"> Kalpana Chawla Planetarium</label>
+                        </fieldset>
+
+                        <!-- button for checking the quiz score-->
+                        <button type="button" id="checkQuiz">Check My Score</button>
+
+                        <!--quiz result-->
+                        <p id="quizResult" role="status"></p>
+                    </form>
+                
+                </div>
+        </section>
+
+            <!-- Pop-up screen opened by the learning resources feature card-->
+            <section class="educationModal"
+                     id="resourcesModal"
+                     role="dialog"
+                     aria-hidden="true"
+                     aria-labelledby="resourcesTitle">
+
+                    
+                <!--Content of the pop-up -->
+                <div class="modalBox">
+
+                    <!--button for closing -->
+                    <button type="button"
+                            class="modalClose"
+                            aria-label="Close pop-up">
+                        &times;
+                    </button>
+
+                    <!--heading -->
+                    <h2 id="resourcesTitle">Learning Resources</h2>
+
+                    <p>
+                        Use these trusted websites to learn more about Kurukshetra,
+                        its heritage and education opportunities.
+                    </p>
+
+                    <!--useful resources link-->
+                    <ul class="resourceList">
+                        <li>
+                            <a href="https://kurukshetra.gov.in/"
+                                target="_blank"
+                                rel="noopener">
+                                District Kurukshetra Government Website
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://kuk.ac.in/"
+                               target="_blank"
+                               rel="noopener">
+                                Kurukshetra University
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://skau.ac.in/"
+                               target="_blank"
+                               rel="noopener">
+                               Shri Krishna AYUSH University
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://haryanatourism.gov.in/destinations/kurukshetra/"
+                               target="_blank"
+                               rel="noopener">
+                               Haryana Tourism: Kurukshetra
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!--other offline learning suggestion-->
+                    <p class="modalNote">
+                        You can also learn through books about the Mahabharata, Bhagavad Gita,
+                        local museums and educational visits in Kurukshetra.
+                    </p>
+                </div>
+                    
+                    
+            </section>
+
+        <!-- Information displayed at the bottom of the page -->
+    <footer>
+
+        <div class="footerContent">
+
+            <div>
+                <h3>Cultural Heritage Of Kurukshetra</h3>
+                <p>Discover the history, culture and sacred places of Kurukshetra.</p>       
+            </div>
+            
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">•Home</a>
+                <a href="about.html">•About Kurukshetra</a>
+                <a href="heritage.html">•Heritage</a>
+            </div>
+
+            <div>
+                <h3>Explore</h3>
+                <a href="places.html">•Important Places</a>
+                <a href="education.html">•Education &amp; Learning</a>
+                <a href="gallery.html">•Gallery</a>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>📍Kurukshetra, Haryana, India</p>
+                <p>📧info@kurukshetra.org.in</p>
+                <p>📞+91 1234567890</p>
+            </div>
+        </div>
+
+        <p class="copyright">
+             This website is for educational purposes only.
+           &copy; 2026 Cultural Heritage of Kurukshetra. All rights reserved. 
+            Website Project by Nivedita.<span><button onclick="document.getElementById('dialogContainer').showModal();">Copyright & Privacy Policy</button></span>
+        </p>
+    </footer> 
+
+    <dialog id="dialogContainer">
+        <!-- Copyright and privacy policy -->
+        <h1>Copyright & Privacy Policy</h1>
+        
+        <section class="legalContent">
+
+            <h2>Copyright Notice</h2>
+
+            <p>
+                This website is an original work created solely for educational and
+                assessment purposes. It is not intended for commercial use, financial
+                gain, or business activities.
+            </p>
+
+            <p>
+                Unless otherwise stated, the website content, including text, design,
+                source code, and original materials, has been created by the author.
+                Images, audio, video, and other media resources used on this website
+                are included for educational, critique, review, research, or
+                demonstration purposes and are believed to comply with applicable
+                copyright laws, fair dealing/fair use provisions, or the terms of
+                their respective licences. Copyright for third-party materials remains
+                with their respective owners.
+            </p>
+
+            <p>
+                This website is licensed under the
+                <strong>Creative Commons Attribution-NonCommercial 4.0 International
+                (CC BY-NC 4.0) Licence</strong>, allowing others to share and adapt
+                the content for non-commercial purposes with appropriate attribution.
+            </p>
+
+            <p>
+                <a href="https://creativecommons.org/licenses/by-nc/4.0/"
+                target="_blank"
+                rel="noopener">
+                    Creative Commons BY-NC 4.0 Licence
+                </a>
+            </p>
+
+            <hr>
+
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated:</strong> 14/10/2026</p>
+
+            <h3>1. Information We Collect</h3>
+            <p>
+                We may collect personal information such as your name, email address,
+                and account details when you register or use our website.
+            </p>
+
+            <h3>2. How We Use Your Information</h3>
+            <p>We use your information to:</p>
+            <ul>
+                <li>Provide website services</li>
+                <li>Improve user experience</li>
+                <li>Respond to enquiries</li>
+                <li>Maintain website security</li>
+            </ul>
+
+            <h3>3. Sharing Information</h3>
+            <p>
+                We do not sell or rent personal information to third parties.
+                Information may only be shared when required by law or to provide our
+                services.
+            </p>
+
+            <h3>4. Data Security</h3>
+            <p>
+                We use appropriate security measures to protect your personal
+                information against unauthorized access, loss, or misuse.
+            </p>
+
+            <h3>5. Your Rights</h3>
+            <ul>
+                <li>Access your personal information</li>
+                <li>Request corrections to inaccurate information</li>
+                <li>Request deletion of information where legally permitted</li>
+            </ul>
+
+            <h3>6. Cookies</h3>
+            <p>
+                Our website may use cookies to improve functionality and analyse
+                website usage.
+            </p>
+
+            <h3>7. Contact Us</h3>
+            <p>
+                If you have questions about this Privacy Policy, please contact us at:
+                Email: info@kurukshetra.org.in<br>
+                Phone: +91 1234567890<br>
+                Address: Kurukshetra, Haryana, India 
+            </p>
+
+        </section>
+        <button onclick="document.getElementById('dialogContainer').close();">CLOSE</button>
+
+    </dialog>
+
+</body>
+</html>
+
+
+
+
+
+

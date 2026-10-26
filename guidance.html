@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Supports normal text and special characters -->
+    <meta charset="UTF-8">
+
+    <!-- Allows the layout to fit mobile screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Text displayed in the browser tab -->
+    <title>Guidance &amp; Support | Cultural Heritage Of Kurukshetra</title> 
+
+    <!-- Connects this page to our shared CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Loads our Javascript after the HTML is ready -->
+    <script src="index.js" defer></script>
+    <script src="guidance.js" defer></script> 
+</head>
+
+<body>
+
+    <!-- Website name and page heading -->
+    <header id="header">
+
+        <!-- Top row: logo and website name -->
+        <div class="brandBar">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Kurukshetra Heritage logo">
+                <span>Cultural Heritage of Kurukshetra</span>
+            </a>
+        </div>
+
+        <!-- Second row: current page and menu button -->
+        <div class="pageBar">
+            <button type="button"
+                    id="menuToggle"
+                    aria-controls="navLinks"
+                    aria-expanded="false">
+                ☰ 
+            </button>
+
+            <p>Guidance &amp; Support</p>
+
+            <!-- Search box on the right of the Home bar -->
+            <div class="searchArea">
+                <button type="button"
+                        id="searchToggle"
+                        aria-label="Open search"
+                        aria-controls="menuSearch"
+                        aria-expanded="false">
+                    🔍
+                </button>
+
+                <input type="search"
+                       id="menuSearch"
+                       placeholder="Search pages..."
+                       aria-label="Search website pages"
+                       aria-controls="menuPages"
+                       hidden>
+            </div>
+        </div>
+    
+            
+        <!-- Navigation follows the pages in my sitemap -->
+         <nav id="navLinks" aria-label="Main navigation">
+            <!-- Close the side menu -->
+            <button type="button" id="closeMenu" aria-label="Close menu">
+            &times;
+            </button>
+
+            <p id="searchMessage" role="status"></p>
+
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Kurukshetra</a>
+                </li>
+
+                <li>
+                    <a href="heritage.html">Heritage</a>
+                </li>
+
+                <li>
+                    <a href="places.html">Important Places</a>
+                </li>
+
+                <li>
+                    <a href="education.html">Education &amp; Learning </a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="guidance.html" aria-current="page">Guidance &amp; Support</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>       
+            </ul>
+            <!-- Account options shown in the wireframe -->
+            <div class="accountOptions">
+
+                <div class="accountBox">
+                    <button type="button" id="signupbutton">Sign Up</button>
+                    <p>Create a new account</p>
+                </div>
+
+                <div class="accountBox">
+                    <button type="button" id="loginbutton">Log In</button>
+                    <p>Already have an account?</p>
+                </div>
+
+            </div>
+
+         </nav>
+
+    </header> 
+      <!-- Google Translator Widget -->
+        <!-- The translator dropdown will appear here -->
+        <div id="google_translate_element"></div>
+
+        <!-- JavaScript function that starts Google Translate -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    {
+                        pageLanguage: "en"
+                    },
+                    "google_translate_element"
+                );
+            }
+        </script>
+
+        <!-- Google Translate script -->
+        <script
+            type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+
+        <!-- Our content of the page will go here-->
+        <main class="guidancePage">
+
+            <!-- page intro-->
+            <section class="guidanceHero">
+
+                <div class="guidanceHeroImages">
+                    <img id="guidanceHeroImage"
+                         class="heroSlide isVisible"
+                         src="images/gallery1.jpg"
+                         alt="Visitor view of Kurukshetra">
+
+                    <img id="nextguidanceHeroImage"
+                         class="heroSlide"
+                         src="images/hero2.png"
+                         alt="">
+
+                </div>
+
+
+                <div class="guidanceHeroText">
+                    <p class="breadcrumb">Home &gt; Guidance &amp; Support</p>
+
+                    <h1>Plan Your Visit</h1>
+                    <p>
+                        Useful travel information to help visitors enjoy Kurukshetra
+                        comfortably, respectfully and safely.
+                    </p>
+                </div>
+            </section>
+
+            <section class="guidanceIntro">
+
+                <h2>-----How Can We Help?-----</h2>
+
+            </section>
+
+            <!-- Visitor guidance categories -->
+            <section class="guidanceCards">
+                <!-- Feature Card button 1 -->
+                <article class="guidanceCard">
+                    <img src="images/usefulinfo.jpg"
+                         alt="Useful information">
+
+                    <h2>Useful Information</h2>
+                    <p>
+                        Find travel advice, transport information, local guidance
+                        and useful instructions for visiting Kurukshetra.
+                    </p>
+                    <button type="button" class="guidanceButton"
+                            data-modal="informationModal">
+                        Read More
+                    </button>
+                </article>
+           
+                <!-- Feature Card button 2 -->
+                <article class="guidanceCard">
+                    <img src="images/planyourvisit2.jpg"
+                         alt="Plan your Journey">
+                    <h2>Plan Your Journey</h2>
+                    <p>
+                        Plan a simple route to explore sacred places, heritage sites 
+                        and important locations in Kurukshetra.
+                    </p>
+                    <button type="button" class="guidanceButton"
+                            data-modal="journeyModal">
+                        Plan Now
+                    </button>
+                </article>
+                
+            </section>
+
+            <!-- Quick tip-->
+            <section class="quickTip">
+                <h2>💡 Quick Tip </h2>
+                <p>
+                    Wear comfortable footwear, carry drinking water and dress respectfully
+                    when visiting temples and other sacred places. 
+                </p>
+            </section>
+
+       
+        </main>
+        
+        <!-- Pop-up screen opened by the useful information feature card -->
+        <section class="guidanceModal"
+                 id="informationModal"
+                 aria-hidden="true"
+                 role="dialog"
+                 aria-modal="true"
+                 aria-labelledby="informationTitle">
+            
+            <!-- white content box inside the darker pop-up background -->
+            <div class="guidanceModalBox">
+
+                <!-- Button used to close this pop-up -->
+                <button type="button"
+                        class="guidanceModalClose"
+                        aria-label="Close pop-up">
+                    &times;
+                </button>
+
+                <!-- Pop-up heading -->
+                <h2 id="informationTitle">Useful Information</h2>
+
+                <!-- content -->
+                <h3>Before You Visit</h3>
+
+                <p>
+                    Kurukshetra is easiest to explore in comfortable clothing and footwear.
+                    Carry drinking water, especially during warm weather, and keep some time
+                    for travelling between different sites.
+                </p>
+
+                <h3>Respectful Visits</h3>
+
+                <p>
+                    Many places in Kurukshetra are religious and culturally important.
+                    Visitors should dress respectfully, remove footwear where required,
+                    and follow signs or instructions at temples and sacred areas.
+                </p>
+
+                <h3>Getting Around</h3>
+
+                <p>
+                    Local transport, taxis and auto-rickshaws can help visitors travel
+                    between the railway station, bus stand, Brahma Sarovar, Jyotisar
+                    and other important places.
+                </p>
+
+            </div>
+        </section>
+   
+        <!-- pop-up screen opened by Plan your journey feature card-->
+        <section class="guidanceModal"
+                 id="journeyModal"
+                 aria-hidden="true"
+                 role="dialog"
+                 aria-modal="true"
+                 aria-labelledby="journeyTitle">
+            
+            <!--content box inside the pop-up-->
+            <div class="guidanceModalBox">
+
+                <!--button used to close the pop-up-->
+                <button type="button"
+                        class="guidanceModalClose"
+                        aria-label="Close pop-up">
+                    &times;
+                </button>
+
+                <!--pop-up heading-->
+                <h2 id="journeyTitle">Plan Your Journey</h2>
+
+                <h3>1. Choose Your Places</h3>
+                <p>
+                    Choose the places you would like to visit, such as Brahma Sarovar,
+                    Jyotisar, Sthaneshwar Mahadev Temple, Kurukshetra Panorama and
+                    Science Centre, or museums and heritage sites.
+                </p>
+
+                <h3>2. Plan Your Route</h3>
+                <p>
+                    Group nearby places together to save travelling time. Start early if
+                    you want to visit several locations in one day, especially during
+                    weekends or religious festivals.
+                </p>
+
+                <h3>3. Keep Essentials Ready</h3>
+                <p>
+                    Carry water, a phone charger, comfortable footwear and a small bag.
+                    Check local opening times before visiting museums or public attractions.
+                </p>
+
+                <h3>4. Ask For Help If Needed</h3>
+                <p>
+                    Use the Contact Us page for general support and local guidance while
+                    planning your visit.
+                </p>
+
+                <!-- Map of Kurukshetra-->
+                <iframe class="journeyMap"
+                        src="https://www.google.com/maps?q=Kurukshetra%2C%20Haryana%2C%20India&output=embed"
+                        title="Map of Kurukshetra, Haryana"
+                        loading="lazy">
+                    </iframe>
+            </div>
+        </section>
+
+        <!-- Information displayed at the bottom of the page -->
+    <footer>
+
+        <div class="footerContent">
+
+            <div>
+                <h3>Cultural Heritage Of Kurukshetra</h3>
+                <p>Discover the history, culture and sacred places of Kurukshetra.</p>       
+            </div>
+            
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">•Home</a>
+                <a href="about.html">•About Kurukshetra</a>
+                <a href="heritage.html">•Heritage</a>
+            </div>
+
+            <div>
+                <h3>Explore</h3>
+                <a href="places.html">•Important Places</a>
+                <a href="education.html">•Education &amp; Learning</a>
+                <a href="gallery.html">•Gallery</a>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>📍Kurukshetra, Haryana, India</p>
+                <p>📧info@kurukshetra.org.in</p>
+                <p>📞+91 1234567890</p>
+            </div>
+        </div>
+
+        <p class="copyright">
+             This website is for educational purposes only.
+           &copy; 2026 Cultural Heritage of Kurukshetra. All rights reserved. 
+            Website Project by Nivedita.<span><button onclick="document.getElementById('dialogContainer').showModal();">Copyright & Privacy Policy</button></span>
+        </p>
+    </footer> 
+
+    <dialog id="dialogContainer">
+        <!-- Copyright and privacy policy -->
+        <h1>Copyright & Privacy Policy</h1>
+        
+        <section class="legalContent">
+
+            <h2>Copyright Notice</h2>
+
+            <p>
+                This website is an original work created solely for educational and
+                assessment purposes. It is not intended for commercial use, financial
+                gain, or business activities.
+            </p>
+
+            <p>
+                Unless otherwise stated, the website content, including text, design,
+                source code, and original materials, has been created by the author.
+                Images, audio, video, and other media resources used on this website
+                are included for educational, critique, review, research, or
+                demonstration purposes and are believed to comply with applicable
+                copyright laws, fair dealing/fair use provisions, or the terms of
+                their respective licences. Copyright for third-party materials remains
+                with their respective owners.
+            </p>
+
+            <p>
+                This website is licensed under the
+                <strong>Creative Commons Attribution-NonCommercial 4.0 International
+                (CC BY-NC 4.0) Licence</strong>, allowing others to share and adapt
+                the content for non-commercial purposes with appropriate attribution.
+            </p>
+
+            <p>
+                <a href="https://creativecommons.org/licenses/by-nc/4.0/"
+                target="_blank"
+                rel="noopener">
+                    Creative Commons BY-NC 4.0 Licence
+                </a>
+            </p>
+
+            <hr>
+
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated:</strong> 14/10/2026</p>
+
+            <h3>1. Information We Collect</h3>
+            <p>
+                We may collect personal information such as your name, email address,
+                and account details when you register or use our website.
+            </p>
+
+            <h3>2. How We Use Your Information</h3>
+            <p>We use your information to:</p>
+            <ul>
+                <li>Provide website services</li>
+                <li>Improve user experience</li>
+                <li>Respond to enquiries</li>
+                <li>Maintain website security</li>
+            </ul>
+
+            <h3>3. Sharing Information</h3>
+            <p>
+                We do not sell or rent personal information to third parties.
+                Information may only be shared when required by law or to provide our
+                services.
+            </p>
+
+            <h3>4. Data Security</h3>
+            <p>
+                We use appropriate security measures to protect your personal
+                information against unauthorized access, loss, or misuse.
+            </p>
+
+            <h3>5. Your Rights</h3>
+            <ul>
+                <li>Access your personal information</li>
+                <li>Request corrections to inaccurate information</li>
+                <li>Request deletion of information where legally permitted</li>
+            </ul>
+
+            <h3>6. Cookies</h3>
+            <p>
+                Our website may use cookies to improve functionality and analyse
+                website usage.
+            </p>
+
+            <h3>7. Contact Us</h3>
+            <p>
+                If you have questions about this Privacy Policy, please contact us at:
+                Email: info@kurukshetra.org.in<br>
+                Phone: +91 1234567890<br>
+                Address: Kurukshetra, Haryana, India 
+            </p>
+
+        </section>
+        <button onclick="document.getElementById('dialogContainer').close();">CLOSE</button>
+
+    </dialog>
+
+</body>
+</html>
+
+
+
+
+
+

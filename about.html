@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Supports normal text and special characters -->
+    <meta charset="UTF-8">
+
+    <!-- Allows the layout to fit mobile screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Text displayed in the browser tab -->
+    <title>Home | Cultural Heritage Of Kurukshetra</title> 
+
+    <!-- Connects this page to our shared CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Loads our Javascript after the HTML is ready -->
+    <script src="index.js" defer></script> 
+</head>
+
+<body>
+
+    <!-- Website name and page heading -->
+    <header id="header">
+
+        <!-- Top row: logo and website name -->
+        <div class="brandBar">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Kurukshetra Heritage logo">
+                <span>Cultural Heritage of Kurukshetra</span>
+            </a>
+        </div>
+
+        <!-- Second row: current page and menu button -->
+        <div class="pageBar">
+            <button type="button"
+                    id="menuToggle"
+                    aria-controls="navLinks"
+                    aria-expanded="false">
+                ☰ 
+            </button>
+
+            <p>About Kurukshetra</p>
+
+            <!-- Search box on the right of the Home bar -->
+            <div class="searchArea">
+                <button type="button"
+                        id="searchToggle"
+                        aria-label="Open search"
+                        aria-controls="menuSearch"
+                        aria-expanded="false">
+                    🔍
+                </button>
+
+                <input type="search"
+                       id="menuSearch"
+                       placeholder="Search pages..."
+                       aria-label="Search website pages"
+                       aria-controls="menuPages"
+                       hidden>
+            </div>
+        </div>
+    
+            
+        <!-- Navigation follows the pages in my sitemap -->
+         <nav id="navLinks" aria-label="Main navigation">
+            <!-- Close the side menu -->
+            <button type="button" id="closeMenu" aria-label="Close menu">
+            &times;
+            </button>
+
+            <p id="searchMessage" role="status"></p>
+
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html" aria-current="page">About Kurukshetra</a>
+                </li>
+
+                <li>
+                    <a href="heritage.html">Heritage</a>
+                </li>
+
+                <li>
+                    <a href="places.html">Important Places</a>
+                </li>
+
+                <li>
+                    <a href="education.html">Education &amp; Learning </a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="guidance.html">Guidance &amp; Support</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>     
+            </ul>
+            <!-- Account options shown in the wireframe -->
+            <div class="accountOptions">
+
+                <div class="accountBox">
+                    <button type="button" id="signupbutton">Sign Up</button>
+                    <p>Create a new account</p>
+                </div>
+
+                <div class="accountBox">
+                    <button type="button" id="loginbutton">Log In</button>
+                    <p>Already have an account?</p>
+                </div>
+
+            </div>
+
+            
+         </nav>
+
+    </header> 
+      <!-- Google Translator Widget -->
+        <!-- The translator dropdown will appear here -->
+        <div id="google_translate_element"></div>
+
+        <!-- JavaScript function that starts Google Translate -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    {
+                        pageLanguage: "en"
+                    },
+                    "google_translate_element"
+                );
+            }
+        </script>
+
+        <!-- Google Translate script -->
+        <script
+            type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+
+        <!-- Our content of the page will go here-->
+        <main class="aboutPage">
+
+            <section class="aboutIntro">
+                <div class="aboutText">
+                    <p class="breadcrumb">Home &gt; About Kurukshetra</p>
+
+                    <h1>About Kurukshetra</h1>
+
+                    <h2>The Land Of Dharma</h2>
+                    <p>
+                        Kurukshetra is an ancient city in Haryana, India. It is known
+                        around the world as the land of the Bhagavad Gita and has deep
+                        historical, religious and cultural importance.
+                    </p>
+
+                    <h2>History in Brief</h2>
+                    <p id="abstract">
+                        Kurukshetra has a deep connection with the Mahabharata and the teachings
+                        of the Bhagavad Gita.
+                    </p>
+                
+                <div id="detailed" hidden>
+
+                    <p>
+                        According to Indian tradition, the great battle of Mahabharata was fought
+                        in Kurukshetra between the Pandavas and Kauravas. It is believed that
+                        Lord Krishna shared the message of the Bhagavad Gita with Arjuna here.
+                        Today, Kurukshetra is known for its temples, sacred sarovars, museums,
+                        festivals and educational institutions.
+                    </p>
+                    
+                    <section class="aboutDetails">
+
+                        <article class="aboutDetail">
+                            <h2>Kurukshetra: The Land of Dharma</h2>
+                            <p>
+                                Kurukshetra is a historic, cultural and spiritual city in the
+                                Indian state of Haryana. It is often called Dharmakshetra, which
+                                means the land of righteousness. For many people, it is a place
+                                of faith, learning, reflection and pilgrimage.
+                            </p>
+                        </article>
+
+                        <article class="aboutDetail">
+                            <h2>Mahabharata and the Bhagavad Gita</h2>
+                            <p>
+                                Kurukshetra is closely connected with the Mahabharata. According
+                                to Hindu tradition, the great battle between the Pandavas and
+                                Kauravas took place here. Before the battle, Lord Krishna shared
+                                the teachings of the Bhagavad Gita with Arjuna, explaining duty,
+                                courage, right action and selfless service.
+                            </p>
+                        </article>
+
+                        <article class="aboutDetail">
+                            <h2>Jyotisar</h2>
+                            <p>
+                                Jyotisar is one of the most important spiritual sites in
+                                Kurukshetra. It is traditionally believed to be the place where
+                                Lord Krishna delivered the message of the Bhagavad Gita to Arjuna.
+                                Visitors come here to see the sacred banyan tree, Jyotisar Sarovar
+                                and displays related to the Gita.
+                            </p>
+                        </article>
+
+                        <article class="aboutDetail">
+                            <h2>Brahma Sarovar</h2>
+                                <p>
+                                    Brahma Sarovar is one of the best-known landmarks of Kurukshetra.
+                                    It is a large sacred water tank where visitors gather for prayer,
+                                    peaceful walks, aarti and religious events. According to local
+                                    belief, it has a connection with Lord Brahma and is an important
+                                    place for holy bathing during special occasions.
+                                </p>
+                        </article>
+
+                        <article class="aboutDetail">
+                            <h2>Sannihit Sarovar</h2>
+                            <p>
+                                Sannihit Sarovar is another important sacred water site. It is
+                                respected by pilgrims and is visited during Amavasya, solar
+                                eclipses and other religious occasions. The sarovar represents the
+                                strong connection between water, faith and tradition in
+                                Kurukshetra.
+                            </p>
+                        </article>
+
+                        <article class="aboutDetail">
+                            <h2>Temples and Sacred Places</h2>
+                            <p>
+                                Kurukshetra has many places of worship and pilgrimage. Important
+                                sites include Sthaneshwar Mahadev Temple, Bhadrakali Temple,
+                                Sri Venkateswara Swamy Temple and several gurdwaras. These places
+                                show that Kurukshetra has a rich and welcoming religious heritage.
+                            </p>
+                        </article>
+
+                        <article class="aboutDetail">
+                            <h2>48 Kos Kurukshetra</h2>
+                            <p>
+                                The wider sacred region is known as 48 Kos Kurukshetra. It includes
+                                many tirthas, temples, sarovars and heritage sites connected with
+                                religious stories and local traditions. This shows that
+                                Kurukshetra’s heritage is not limited to one building or one area;
+                                it is spread across a large cultural landscape.
+                            </p>
+                        </article>
+
+                        <article class="aboutDetail">
+                            <h2>Museums and Cultural Learning</h2>
+                            <p>
+                                Visitors can learn more about Kurukshetra through places such as
+                                Sri Krishna Museum, Kurukshetra Panorama and Science Centre,
+                                Dharohar Museum and Mahabharata Anubhav Kendra. These places use
+                                objects, displays, art, stories and technology to explain the
+                                history, culture and traditions of the region.
+                            </p>
+                        </article>
+
+                        <article class="aboutDetail">
+                            <h2>Festivals and Traditions</h2>
+                            <p>
+                                Kurukshetra becomes especially vibrant during International Gita
+                                Mahotsav and Gita Jayanti celebrations. These events may include
+                                Bhagavad Gita recitations, cultural programmes, spiritual talks,
+                                exhibitions, Deep Daan and aarti at Brahma Sarovar. They bring
+                                together local people, pilgrims and visitors from different places.
+                            </p>
+                        </article>
+
+                        <article class="aboutDetail">
+                            <h2>Haryanvi Culture</h2>
+                            <p>
+                                The city also reflects the warm culture of Haryana. Local life
+                                includes traditional food, folk music, dance, family gatherings,
+                                hospitality and respect for elders. Kurukshetra gives visitors a
+                                chance to experience both ancient heritage and the everyday culture
+                                of Haryana.
+                            </p>
+                        </article>
+
+                        <article class="aboutDetail">
+                            <h2>Education and Modern Learning</h2>
+                            <p>
+                                Kurukshetra is not only known for religion and history; it is also
+                                an important centre of education. Kurukshetra University was
+                                established in 1956 and supports higher education and research.
+                                This creates a meaningful link between ancient knowledge and modern
+                                learning in the city.
+                            </p>
+                        </article>
+
+                        <article class="aboutDetail">
+                            <h2>Why Kurukshetra Is Important Today</h2>
+                            <p>
+                                Kurukshetra remains important because its message is still
+                                meaningful today. The teachings connected with the Bhagavad Gita
+                                encourage people to act responsibly, stay calm during difficult
+                                situations and make ethical choices. It is a place where heritage,
+                                spirituality, education and culture come together.
+                            </p>
+                        </article>
+
+                    </section>
+                </div>
+                    <button id="expandBtn" type="button">
+                        READ MORE
+                    </button>
+                </div>
+
+                <img class="aboutHeroImage"
+                     src="images/kkr.png"
+                     alt="View of Arjun Chariot in Kurukshetra">
+
+                <aside class="quickFact">
+                    <h2>💡 Quick Fact</h2>
+                    <p>
+                        Kurukshetra is mentioned in the Mahabharata and is one of the
+                        most respected spiritual and historical places in India.
+                    </p>
+                </aside>   
+            </section>
+
+            <section class="significanceSection">
+                <h2>Our Significance</h2>
+
+                <div class="significanceCards">
+                    <article class="significanceCard">
+                        <span class="significanceIcon">🏛️</span>
+                        <div>
+                            <h3>Sacred Land</h3>
+                            <p>
+                               One of the holiest places for Hindus, with many temples
+                               and sacred sites. 
+                            </p>
+                        </div>
+                    </article>
+                    
+                    <article class="significanceCard">
+                        <span class="significanceIcon">📖</span>
+                        <div>
+                            <h3>Centre of Learning</h3>
+                            <p>
+                               A place of education, knowledge, and ancient wisdom,
+                               including Kurukshetra University.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="significanceCard">
+                        <span class="significanceIcon">🕊️</span>
+                        <div>
+                            <h3>Symbol of Peace</h3>
+                            <p>
+                               Kurukshetra represents peace, dharma and the universal 
+                               message of the Bhagavad Gita. 
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="aboutGallery" aria-label="Kurukshetra Photo Gallery">
+                <img src="images/heritage1.webp" alt="Heritage view of Kurukshetra">
+                <img src="images/importantPlaces1.png" alt="Important place in Kurukshetra">
+                <img src="images/gallery1.jpg" alt="Cultural View of Kurukshetra">
+            </section>
+
+        </main> 
+
+         <!-- Information displayed at the bottom of the page -->
+    <footer>
+
+        <div class="footerContent">
+
+            <div>
+                <h3>Cultural Heritage Of Kurukshetra</h3>
+                <p>Discover the history, culture and sacred places of Kurukshetra.</p>       
+            </div>
+            
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">•Home</a>
+                <a href="about.html">•About Kurukshetra</a>
+                <a href="heritage.html">•Heritage</a>
+            </div>
+
+            <div>
+                <h3>Explore</h3>
+                <a href="places.html">•Important Places</a>
+                <a href="education.html">•Education &amp; Learning</a>
+                <a href="gallery.html">•Gallery</a>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>📍Kurukshetra, Haryana, India</p>
+                <p>📧info@kurukshetra.org.in</p>
+                <p>📞+91 1234567890</p>
+            </div>
+        </div>
+
+        <p class="copyright">
+             This website is for educational purposes only.
+           &copy; 2026 Cultural Heritage of Kurukshetra. All rights reserved. 
+            Website Project by Nivedita.<span><button onclick="document.getElementById('dialogContainer').showModal();">Copyright & Privacy Policy</button></span>
+        </p>
+    </footer> 
+
+    <dialog id="dialogContainer">
+        <!-- Copyright and privacy policy -->
+        <h1>Copyright & Privacy Policy</h1>
+        
+        <section class="legalContent">
+
+            <h2>Copyright Notice</h2>
+
+            <p>
+                This website is an original work created solely for educational and
+                assessment purposes. It is not intended for commercial use, financial
+                gain, or business activities.
+            </p>
+
+            <p>
+                Unless otherwise stated, the website content, including text, design,
+                source code, and original materials, has been created by the author.
+                Images, audio, video, and other media resources used on this website
+                are included for educational, critique, review, research, or
+                demonstration purposes and are believed to comply with applicable
+                copyright laws, fair dealing/fair use provisions, or the terms of
+                their respective licences. Copyright for third-party materials remains
+                with their respective owners.
+            </p>
+
+            <p>
+                This website is licensed under the
+                <strong>Creative Commons Attribution-NonCommercial 4.0 International
+                (CC BY-NC 4.0) Licence</strong>, allowing others to share and adapt
+                the content for non-commercial purposes with appropriate attribution.
+            </p>
+
+            <p>
+                <a href="https://creativecommons.org/licenses/by-nc/4.0/"
+                target="_blank"
+                rel="noopener">
+                    Creative Commons BY-NC 4.0 Licence
+                </a>
+            </p>
+
+            <hr>
+
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated:</strong> 14/10/2026</p>
+
+            <h3>1. Information We Collect</h3>
+            <p>
+                We may collect personal information such as your name, email address,
+                and account details when you register or use our website.
+            </p>
+
+            <h3>2. How We Use Your Information</h3>
+            <p>We use your information to:</p>
+            <ul>
+                <li>Provide website services</li>
+                <li>Improve user experience</li>
+                <li>Respond to enquiries</li>
+                <li>Maintain website security</li>
+            </ul>
+
+            <h3>3. Sharing Information</h3>
+            <p>
+                We do not sell or rent personal information to third parties.
+                Information may only be shared when required by law or to provide our
+                services.
+            </p>
+
+            <h3>4. Data Security</h3>
+            <p>
+                We use appropriate security measures to protect your personal
+                information against unauthorized access, loss, or misuse.
+            </p>
+
+            <h3>5. Your Rights</h3>
+            <ul>
+                <li>Access your personal information</li>
+                <li>Request corrections to inaccurate information</li>
+                <li>Request deletion of information where legally permitted</li>
+            </ul>
+
+            <h3>6. Cookies</h3>
+            <p>
+                Our website may use cookies to improve functionality and analyse
+                website usage.
+            </p>
+
+            <h3>7. Contact Us</h3>
+            <p>
+                If you have questions about this Privacy Policy, please contact us at:
+                Email: info@kurukshetra.org.in<br>
+                Phone: +91 1234567890<br>
+                Address: Kurukshetra, Haryana, India 
+            </p>
+
+        </section>
+        <button onclick="document.getElementById('dialogContainer').close();">CLOSE</button>
+
+    </dialog>
+
+</body>
+</html>
+
+
+
+
+
+

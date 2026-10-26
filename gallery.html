@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Supports normal text and special characters -->
+    <meta charset="UTF-8">
+
+    <!-- Allows the layout to fit mobile screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Text displayed in the browser tab -->
+    <title>Gallery | Cultural Heritage Of Kurukshetra</title> 
+
+    <!-- Connects this page to our shared CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Loads our Javascript after the HTML is ready -->
+    <script src="index.js" defer></script>
+    <script src="gallery.js" defer></script> 
+</head>
+
+<body>
+
+    <!-- Website name and page heading -->
+    <header id="header">
+
+        <!-- Top row: logo and website name -->
+        <div class="brandBar">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Kurukshetra Heritage logo">
+                <span>Cultural Heritage of Kurukshetra</span>
+            </a>
+        </div>
+
+        <!-- Second row: current page and menu button -->
+        <div class="pageBar">
+            <button type="button"
+                    id="menuToggle"
+                    aria-controls="navLinks"
+                    aria-expanded="false">
+                ☰ 
+            </button>
+
+            <p>Gallery</p>
+
+            <!-- Search box on the right of the Home bar -->
+            <div class="searchArea">
+                <button type="button"
+                        id="searchToggle"
+                        aria-label="Open search"
+                        aria-controls="menuSearch"
+                        aria-expanded="false">
+                    🔍
+                </button>
+
+                <input type="search"
+                       id="menuSearch"
+                       placeholder="Search pages..."
+                       aria-label="Search website pages"
+                       aria-controls="menuPages"
+                       hidden>
+            </div>
+        </div>
+    
+            
+        <!-- Navigation follows the pages in my sitemap -->
+         <nav id="navLinks" aria-label="Main navigation">
+            <!-- Close the side menu -->
+            <button type="button" id="closeMenu" aria-label="Close menu">
+            &times;
+            </button>
+
+            <p id="searchMessage" role="status"></p>
+
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Kurukshetra</a>
+                </li>
+
+                <li>
+                    <a href="heritage.html">Heritage</a>
+                </li>
+
+                <li>
+                    <a href="places.html">Important Places</a>
+                </li>
+
+                <li>
+                    <a href="education.html">Education &amp; Learning </a>
+                </li>
+
+                <li>
+                    <a href="gallery.html"aria-current="page" >Gallery</a>
+                </li>
+
+                <li>
+                    <a href="guidance.html">Guidance &amp; Support</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>       
+            </ul>
+            <!-- Account options shown in the wireframe -->
+            <div class="accountOptions">
+
+                <div class="accountBox">
+                    <button type="button" id="signupbutton">Sign Up</button>
+                    <p>Create a new account</p>
+                </div>
+
+                <div class="accountBox">
+                    <button type="button" id="loginbutton">Log In</button>
+                    <p>Already have an account?</p>
+                </div>
+
+            </div>
+
+            
+         </nav>
+
+    </header> 
+      <!-- Google Translator Widget -->
+        <!-- The translator dropdown will appear here -->
+        <div id="google_translate_element"></div>
+
+        <!-- JavaScript function that starts Google Translate -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    {
+                        pageLanguage: "en"
+                    },
+                    "google_translate_element"
+                );
+            }
+        </script>
+
+        <!-- Google Translate script -->
+        <script
+            type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+
+        <!-- Our content of the page will go here-->
+        <main class="galleryPage">
+
+            <section class="galleryHero">
+
+                <div class="galleryHeroImages">
+                    <img id="galleryHeroImage"
+                         class="heroSlide isVisible"
+                         src="images/maxresdefault (1).jpg"
+                         alt="Photos of Kurukshetra">
+
+                    <img id="nextgalleryHeroImage"
+                         class="heroSlide"
+                         src="images/Sthaneshwar1.jpg"
+                         alt="">
+
+                </div>
+
+
+                <div class="galleryHeroText">
+                    <p class="breadcrumb">Home &gt; Gallery</p>
+
+                    <h1>Gallery</h1>
+                    <p>
+                        Explore the history, faith, culture and celebrations of Kurukshetra.
+                    </p>
+                </div>
+            </section>
+
+            <section class="galleryIntro">
+                <h2>Browse Gallery</h2>
+
+            </section>
+
+            
+            <section class="galleryCards">
+                <!-- Feature Card button 1 (history) -->
+                <button type="button"
+                        class="galleryCard"
+                        data-modal="historyGalleryModal">
+                    <img src="images/classical-building.png"
+                         alt="History">
+
+
+                    <span>
+                        <strong>History Gallery</strong>
+                        <small>View historical places, heritage sites and Mahabharata connections.</small>
+                        <small>"Click Here To View Images"</small>
+                    </span>
+                </button>
+
+                <!-- Feature Card button 2 (religion)-->
+                <button type="button"
+                         class="galleryCard"
+                         data-modal="religionGalleryModal">
+                    
+                    <img src="images/om.webp"
+                         alt="Religion">
+
+                    <span>
+                        <strong>Religion Gallery</strong>
+                        <small>See temples, sarovars and sacred places in Kurukshetra.</small>
+                        <small>"Click Here To View Images"</small>
+                    </span>
+                </button>
+
+                <!-- Feature Card button 3 (culture)-->
+                <button type="button"
+                         class="galleryCard"
+                         data-modal="cultureGalleryModal">
+                    
+                    <img src="images/culturelogo.webp"
+                         alt="Culture">
+
+                    <span>
+                        <strong>Culture Gallery</strong>
+                        <small>Discover festivals, traditions and cultural celebrations.</small>
+                        <small>"Click Here To View Images"</small>
+                    </span>
+                </button>
+
+                <!-- Feature Card button 4 (Full gallery)-->
+                <button type="button"
+                         class="galleryCard"
+                         data-modal="allGalleryModal">
+                    
+                    <img src="images/allimages.png"
+                         alt="All Images">
+
+                    <span>
+                        <strong>All Images</strong>
+                        <small>Browse the complete visual collection of Kurukshetra.</small>
+                        <small>"Click Here To View Images"</small>
+                    </span>
+                </button>
+                
+            </section>
+
+       
+        </main>
+        
+        <!-- Pop-up screen opened by the History feature card -->
+        <section class="galleryModal"
+                 id="historyGalleryModal"
+                 aria-hidden="true"
+                 role="dialog"
+                 aria-modal="true"
+                 aria-labelledby="historyGalleryTitle">
+            
+            <!-- white content box inside the darker pop-up background -->
+            <div class="galleryModalBox">
+
+                <!-- Button used to close this pop-up -->
+                <button type="button"
+                        class="galleryModalClose"
+                        aria-label="Close pop-up">
+                    &times;
+                </button>
+
+                <!-- Pop-up heading -->
+                <h2 id="historyGalleryTitle">History Gallery</h2>
+
+                <!-- all history images are visible in this pop-up-->
+                <div class="galleryPopupGrid">
+
+                    <figure class="galleryPhoto" data-category="history">
+                        <img src="images/jyotisar.jpg" alt="Historical place in Kurukshetra">
+                        <figcaption>History of Kurukshetra</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="history">
+                        <img src="images/heritage1.webp" alt="Historical heritage in Kurukshetra">
+                        <figcaption>Heritage and History</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="history">
+                        <img src="images/hero1.png" alt="Mahabharata related site in Kurukshetra">
+                        <figcaption>Stories of the Mahabharata</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="history">
+                        <img src="images/drohr.jpg" alt="Historical place in Kurukshetra">
+                        <figcaption>Dharohar in Kurukshetra</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="history">
+                        <img src="images/bhishma-kund-featured.jpg" alt="Historical place in Kurukshetra">
+                        <figcaption>History of Haryana</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="history">
+                            <video controls muted loop playsinline>
+                                <source src="images/Abhimanyu-1.mp4" type="video/mp4">
+                                Your browser does not support this video.
+                            </video>
+
+                            <figcaption>Abhimanyu Scripture</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="history">
+                            <video controls muted loop playsinline>
+                                <source src="images/brahmasarovar.mp4" type="video/mp4">
+                                Your browser does not support this video.
+                            </video>
+
+                            <figcaption>Brahma Sarovar</figcaption>
+                    </figure>
+                </div>
+                                                
+            </div>
+                
+        </section>
+
+        <!-- pop-up screen opened by the Religion feature card-->
+        <section class="galleryModal"
+                 id="religionGalleryModal"
+                 aria-hidden="true"
+                 role="dialog"
+                 aria-modal="true"
+                 aria-labelledby="religionGalleryTitle">
+            
+            <!--content box inside the pop-up-->
+            <div class="galleryModalBox">
+
+                <!--button used to close the pop-up-->
+                <button type="button"
+                        class="galleryModalClose"
+                        aria-label="Close pop-up">
+                    &times;
+                </button>
+
+                <!--pop-up heading-->
+                <h2 id="religionGalleryTitle">Religion Gallery</h2>
+
+                <!-- all religion images are visible in this pop-up-->
+                <div class="galleryPopupGrid">
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/hero3.png" alt="Temple in Kurukshetra">
+                        <figcaption>Sacred Temple</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/kkr1.jpg" alt="Temple in Kurukshetra">
+                        <figcaption>Brahma Sarovar</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/jyotisar2.jpg" alt="Temple in Kurukshetra">
+                        <figcaption>Jyotisar</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/temple3.webp" alt="Temple in Kurukshetra">
+                        <figcaption>Jyotisar Scripture</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/temple.webp" alt="Temple in Kurukshetra">
+                        <figcaption>Sacred Temple</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/temple4.jpeg" alt="Temple in Kurukshetra">
+                        <figcaption>Sacred Temple</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/Temple1.jpeg" alt="Temple in Kurukshetra">
+                        <figcaption>Sacred Temple</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/temple2.webp" alt="Temple in Kurukshetra">
+                        <figcaption>Sacred Temple</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/temple6.jpg" alt="Temple in Kurukshetra">
+                        <figcaption>Sacred Temple</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/visitKurukshetra.webp" alt="Temple in Kurukshetra">
+                        <figcaption>Sacred Temple</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/Sthaneshwar1.jpg" alt="Temple in Kurukshetra">
+                        <figcaption>Sacred Temple</figcaption>
+                    </figure>
+                </div>                
+            </div>
+        </section>
+
+        <!-- pop-up screen opened by the culture feature card-->
+        <section class="galleryModal"
+                  id="cultureGalleryModal"
+                  aria-hidden="true"
+                  role="dialog"
+                  aria-modal="true"
+                  aria-labelledby="cultureGalleryTitle">
+                
+                <!-- content box inside the pop-up-->
+                <div class="galleryModalBox">
+                    
+                    <!--button for closing the pop-up-->
+                    <button type="button"
+                            class="galleryModalClose"
+                            aria-label="Close pop-up">
+                        &times;
+                    </button>
+
+                    <!--pop-up heading-->
+                    <h2 id="cultureGalleryTitle">Culture Gallery</h2>
+                
+                    <!--all the culture content will visible here -->
+                    <div class="galleryPopupGrid">
+
+                        <figure class="galleryPhoto" data-category="culture">
+                            <img src="images/culture2.webp" alt="Cultural celebrations in Kurukshetra">
+                            <figcaption>Local Celebration</figcaption>
+                        </figure>
+
+                        <figure class="galleryPhoto" data-category="culture">
+                            <img src="images/18_01_2022-gita_jayanti_mahotsav_22392033.jpg" alt="Cultural celebrations in Kurukshetra">
+                            <figcaption>International Gita Mahotsav</figcaption>
+                        </figure>
+
+                        <figure class="galleryPhoto" data-category="culture">
+                            <img src="images/hero2.png" alt="Cultural celebrations in Kurukshetra">
+                            <figcaption>International Gita Mahotsav</figcaption>
+                        </figure>
+
+                        <figure class="galleryPhoto" data-category="culture">
+                            <video controls muted loop playsinline>
+                                <source src="images/Gita-Jayanti.mp4" type="video/mp4">
+                                Your browser does not support this video.
+                            </video>
+
+                            <figcaption>International Gita Mahotsav</figcaption>
+                        </figure>
+
+                        <figure class="galleryPhoto" data-category="culture">
+                            <img src="images/culture.webp" alt="Cultural celebrations in Kurukshetra">
+                            <figcaption>Cultural Dance</figcaption>
+                        </figure>
+                        
+                        <figure class="galleryPhoto" data-category="culture">
+                            <img src="images/gallery1.jpg" alt="Cultural celebrations in Kurukshetra">
+                            <figcaption>Illustration of Bhagavad Gita</figcaption>
+                        </figure>
+
+                    </div>
+                
+                </div>
+        </section>
+
+            <!-- Pop-up screen opened by the All images feature card-->
+        <section class="galleryModal"
+                     id="allGalleryModal"
+                     role="dialog"
+                     aria-hidden="true"
+                     aria-labelledby="allGalleryTitle">
+
+                    
+                <!--Content of the pop-up -->
+                <div class="galleryModalBox">
+
+                    <!--button for closing -->
+                    <button type="button"
+                            class="galleryModalClose"
+                            aria-label="Close pop-up">
+                        &times;
+                    </button>
+
+                    <!--heading -->
+                    <h2 id="allGalleryTitle">All Images of Kurukshetra</h2>
+
+                    <!-- all gallery content will appear here -->
+                    <div class="galleryPopupGrid">
+
+                     <figure class="galleryPhoto" data-category="history">
+                        <img src="images/jyotisar.jpg" alt="Historical place in Kurukshetra">
+                        <figcaption>History of Kurukshetra</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="history">
+                        <img src="images/heritage1.webp" alt="Historical heritage in Kurukshetra">
+                        <figcaption>Heritage and History</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="history">
+                        <img src="images/hero1.png" alt="Mahabharata related site in Kurukshetra">
+                        <figcaption>Stories of the Mahabharata</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="history">
+                        <img src="images/drohr.jpg" alt="Historical place in Kurukshetra">
+                        <figcaption>Dharohar in Kurukshetra</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="history">
+                        <img src="images/bhishma-kund-featured.jpg" alt="Historical place in Kurukshetra">
+                        <figcaption>History of Haryana</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="history">
+                            <video controls muted loop playsinline>
+                                <source src="images/Abhimanyu-1.mp4" type="video/mp4">
+                                Your browser does not support this video.
+                            </video>
+
+                            <figcaption>Abhimanyu Scripture</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="history">
+                            <video controls muted loop playsinline>
+                                <source src="images/brahmasarovar.mp4" type="video/mp4">
+                                Your browser does not support this video.
+                            </video>
+
+                            <figcaption>Brahma Sarovar</figcaption>
+                    </figure>
+
+                     <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/hero3.png" alt="Temple in Kurukshetra">
+                        <figcaption>Sacred Temple</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/kkr1.jpg" alt="Temple in Kurukshetra">
+                        <figcaption>Brahma Sarovar</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/jyotisar2.jpg" alt="Temple in Kurukshetra">
+                        <figcaption>Jyotisar</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/temple3.webp" alt="Temple in Kurukshetra">
+                        <figcaption>Jyotisar Scripture</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/temple.webp" alt="Temple in Kurukshetra">
+                        <figcaption>Sacred Temple</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/temple4.jpeg" alt="Temple in Kurukshetra">
+                        <figcaption>Sacred Temple</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/Temple1.jpeg" alt="Temple in Kurukshetra">
+                        <figcaption>Sacred Temple</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/temple2.webp" alt="Temple in Kurukshetra">
+                        <figcaption>Sacred Temple</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/temple6.jpg" alt="Temple in Kurukshetra">
+                        <figcaption>Sacred Temple</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/visitKurukshetra.webp" alt="Temple in Kurukshetra">
+                        <figcaption>Sacred Temple</figcaption>
+                    </figure>
+
+                    <figure class="galleryPhoto" data-category="religion">
+                        <img src="images/Sthaneshwar1.jpg" alt="Temple in Kurukshetra">
+                        <figcaption>Sacred Temple</figcaption>
+                    </figure>
+                    
+                    <figure class="galleryPhoto" data-category="culture">
+                            <img src="images/culture2.webp" alt="Cultural celebrations in Kurukshetra">
+                            <figcaption>Local Celebration</figcaption>
+                        </figure>
+
+                        <figure class="galleryPhoto" data-category="culture">
+                            <img src="images/18_01_2022-gita_jayanti_mahotsav_22392033.jpg" alt="Cultural celebrations in Kurukshetra">
+                            <figcaption>International Gita Mahotsav</figcaption>
+                        </figure>
+
+                        <figure class="galleryPhoto" data-category="culture">
+                            <img src="images/hero2.png" alt="Cultural celebrations in Kurukshetra">
+                            <figcaption>International Gita Mahotsav</figcaption>
+                        </figure>
+
+                        <figure class="galleryPhoto" data-category="culture">
+                            <video controls muted loop playsinline>
+                                <source src="images/Gita-Jayanti.mp4" type="video/mp4">
+                                Your browser does not support this video.
+                            </video>
+
+                            <figcaption>International Gita Mahotsav</figcaption>
+                        </figure>
+
+                        <figure class="galleryPhoto" data-category="culture">
+                            <img src="images/culture.webp" alt="Cultural celebrations in Kurukshetra">
+                            <figcaption>Cultural Dance</figcaption>
+                        </figure>
+                        
+                        <figure class="galleryPhoto" data-category="culture">
+                            <img src="images/gallery1.jpg" alt="Cultural celebrations in Kurukshetra">
+                            <figcaption>Illustration of Bhagavad Gita</figcaption>
+                        </figure>
+                    
+
+                    </div>
+                    
+                </div>
+                    
+                    
+        </section>
+
+        <!-- Information displayed at the bottom of the page -->
+    <footer>
+
+        <div class="footerContent">
+
+            <div>
+                <h3>Cultural Heritage Of Kurukshetra</h3>
+                <p>Discover the history, culture and sacred places of Kurukshetra.</p>       
+            </div>
+            
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">•Home</a>
+                <a href="about.html">•About Kurukshetra</a>
+                <a href="heritage.html">•Heritage</a>
+            </div>
+
+            <div>
+                <h3>Explore</h3>
+                <a href="places.html">•Important Places</a>
+                <a href="education.html">•Education &amp; Learning</a>
+                <a href="gallery.html">•Gallery</a>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>📍Kurukshetra, Haryana, India</p>
+                <p>📧info@kurukshetra.org.in</p>
+                <p>📞+91 1234567890</p>
+            </div>
+        </div>
+
+        <p class="copyright">
+             This website is for educational purposes only.
+           &copy; 2026 Cultural Heritage of Kurukshetra. All rights reserved. 
+            Website Project by Nivedita.<span><button onclick="document.getElementById('dialogContainer').showModal();">Copyright & Privacy Policy</button></span>
+        </p>
+    </footer> 
+
+    <dialog id="dialogContainer">
+        <!-- Copyright and privacy policy -->
+        <h1>Copyright & Privacy Policy</h1>
+        
+        <section class="legalContent">
+
+            <h2>Copyright Notice</h2>
+
+            <p>
+                This website is an original work created solely for educational and
+                assessment purposes. It is not intended for commercial use, financial
+                gain, or business activities.
+            </p>
+
+            <p>
+                Unless otherwise stated, the website content, including text, design,
+                source code, and original materials, has been created by the author.
+                Images, audio, video, and other media resources used on this website
+                are included for educational, critique, review, research, or
+                demonstration purposes and are believed to comply with applicable
+                copyright laws, fair dealing/fair use provisions, or the terms of
+                their respective licences. Copyright for third-party materials remains
+                with their respective owners.
+            </p>
+
+            <p>
+                This website is licensed under the
+                <strong>Creative Commons Attribution-NonCommercial 4.0 International
+                (CC BY-NC 4.0) Licence</strong>, allowing others to share and adapt
+                the content for non-commercial purposes with appropriate attribution.
+            </p>
+
+            <p>
+                <a href="https://creativecommons.org/licenses/by-nc/4.0/"
+                target="_blank"
+                rel="noopener">
+                    Creative Commons BY-NC 4.0 Licence
+                </a>
+            </p>
+
+            <hr>
+
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated:</strong> 14/10/2026</p>
+
+            <h3>1. Information We Collect</h3>
+            <p>
+                We may collect personal information such as your name, email address,
+                and account details when you register or use our website.
+            </p>
+
+            <h3>2. How We Use Your Information</h3>
+            <p>We use your information to:</p>
+            <ul>
+                <li>Provide website services</li>
+                <li>Improve user experience</li>
+                <li>Respond to enquiries</li>
+                <li>Maintain website security</li>
+            </ul>
+
+            <h3>3. Sharing Information</h3>
+            <p>
+                We do not sell or rent personal information to third parties.
+                Information may only be shared when required by law or to provide our
+                services.
+            </p>
+
+            <h3>4. Data Security</h3>
+            <p>
+                We use appropriate security measures to protect your personal
+                information against unauthorized access, loss, or misuse.
+            </p>
+
+            <h3>5. Your Rights</h3>
+            <ul>
+                <li>Access your personal information</li>
+                <li>Request corrections to inaccurate information</li>
+                <li>Request deletion of information where legally permitted</li>
+            </ul>
+
+            <h3>6. Cookies</h3>
+            <p>
+                Our website may use cookies to improve functionality and analyse
+                website usage.
+            </p>
+
+            <h3>7. Contact Us</h3>
+            <p>
+                If you have questions about this Privacy Policy, please contact us at:
+                Email: info@kurukshetra.org.in<br>
+                Phone: +91 1234567890<br>
+                Address: Kurukshetra, Haryana, India 
+            </p>
+
+        </section>
+        <button onclick="document.getElementById('dialogContainer').close();">CLOSE</button>
+
+    </dialog>
+
+</body>
+</html>
+
+
+
+
+
+
